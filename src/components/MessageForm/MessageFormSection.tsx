@@ -100,7 +100,6 @@ export default function MessageFormSection(props: IProps) {
                          <input type="checkbox" />
                          <span>{termsAndConditionsText}</span>
                     </label>
-
                     <button type="button" className={styles.btnSend}>
                          {buttonText}
                     </button>
