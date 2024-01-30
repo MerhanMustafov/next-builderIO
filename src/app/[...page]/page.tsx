@@ -1,8 +1,7 @@
-import { RenderBuilderContent } from "../components/builder";
 import { builder } from "@builder.io/sdk";
+import { RenderBuilderContent } from "../../components/builder";
 
 builder.init('9a41098f7b034bc69ea3e94d13345db8');
-
 
 interface PageProps {
   params: {
