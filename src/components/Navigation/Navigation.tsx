@@ -2,9 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Logo from '../../../public/accedia-logo.svg';
 import styles from './navigation.module.css';
-import { builder } from '@builder.io/sdk';
-
-builder.init('9a41098f7b034bc69ea3e94d13345db8');
 
 export default async function Navigation() {
      // const links = await builder.getAll('nav-link', {

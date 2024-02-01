@@ -1,15 +1,12 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import Navigation from '../components/Navigation/Navigation';
 import './globals.css';
 import styles from './layout.module.css';
-import { RxHamburgerMenu } from 'react-icons/rx';
-import { builder } from '@builder.io/sdk';
 import Footer from '@/components/Footer/Footer';
 import SideNav from '@/components/SideNav/SideNav';
-builder.init('9a41098f7b034bc69ea3e94d13345db8');
+import { builder } from '@builder.io/sdk';
 
-const inter = Inter({ subsets: ['latin'] });
+builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY as string);
 
 export const metadata: Metadata = {
      title: 'Create Next App',
