@@ -3,7 +3,6 @@ import Navigation from '../components/Navigation/Navigation';
 import './globals.css';
 import styles from './layout.module.css';
 import Footer from '@/components/Footer/Footer';
-import SideNav from '@/components/SideNav/SideNav';
 import { builder } from '@builder.io/sdk';
 
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY as string);
@@ -22,7 +21,6 @@ export default function RootLayout({
           <html lang="en">
                <body>
                     <div className={styles.root}>
-                         <SideNav />
                          <header className={styles.header}>
                               <Navigation />
                          </header>
