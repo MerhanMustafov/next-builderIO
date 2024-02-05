@@ -39,7 +39,7 @@ export default async function Navigation() {
                          justifyContent: 'center',
                     }}
                >
-                    {/* {links.map((link, index) => (
+                    {/* {links?.map((link, index) => (
                          <Link
                               key={index}
                               className={styles.link}

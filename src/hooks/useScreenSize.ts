@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 
 export default function useScreenSize() {
-     const [isWindow, setIsWindow] = useState(false);
+     const [isWindow, setIsWindow] = useState(true);
      const handleResize = () => {
           const width = window.innerWidth;
           if (width < 1000) {

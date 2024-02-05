@@ -1,8 +1,10 @@
+'use client';
 import styles from './messageFormSection.module.css';
 import { FaRegMessage } from 'react-icons/fa6';
 import { AiOutlineMobile } from 'react-icons/ai';
 import { useState } from 'react';
 import InputField from './InputField';
+import useScreenSize from '@/hooks/useScreenSize';
 
 interface IProps {
      sectionTitle: string;
@@ -14,6 +16,7 @@ interface IProps {
 }
 
 export default function MessageFormSection(props: IProps) {
+     const { isWindow } = useScreenSize();
      const [focused, setFocused] = useState(-1);
      const {
           sectionTitle,
@@ -28,10 +31,14 @@ export default function MessageFormSection(props: IProps) {
      const txt = subtitle.replace(linkText, '');
 
      return (
-          <div className={styles.wrapper}>
+          <div
+               className={
+                    isWindow ? styles.wrapperWindow : styles.wrapperMobile
+               }
+          >
                <div className={styles.left}>
                     <h2 className={styles.sectionTitle}>{sectionTitle}</h2>
-                    <h3>
+                    <h3 className={styles.subtitle}>
                          {txt.slice(0, indexOf)}
                          {getEl}
                          {txt.slice(indexOf)}
@@ -76,33 +83,3 @@ export default function MessageFormSection(props: IProps) {
           </div>
      );
 }
-
-// const init: IProps = {
-//      sectionTitle: 'Contact us',
-//      subtitle: 'Have a question or want to learn more about our services?',
-//      linkText: 'Contact us',
-//      termsAndConditionsText: 'I agree to the terms and conditions',
-//      buttonText: 'Send',
-//      inputFields: [
-//           {
-//                plh: 'Your name',
-//                type: 'text',
-//                isRequired: true,
-//           },
-//           {
-//                plh: 'Your email',
-//                type: 'email',
-//                isRequired: true,
-//           },
-//           {
-//                plh: 'Your phone',
-//                type: 'tel',
-//                isRequired: false,
-//           },
-//           {
-//                plh: 'Your message',
-//                type: 'text',
-//                isRequired: true,
-//           },
-//      ],
-// };
