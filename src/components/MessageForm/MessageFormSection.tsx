@@ -13,37 +13,6 @@ interface IProps {
      inputFields: { plh: string; type: string; isRequired: boolean }[];
 }
 
-const init: IProps = {
-     sectionTitle: 'Contact us',
-     subtitle: 'Have a question or want to learn more about our services?',
-     linkText: 'Contact us',
-     termsAndConditionsText: 'I agree to the terms and conditions',
-     buttonText: 'Send',
-     inputFields: [
-          {
-               plh: 'Your name',
-               type: 'text',
-               isRequired: true,
-          },
-          {
-               plh: 'Your email',
-               type: 'email',
-               isRequired: true,
-          },
-          {
-               plh: 'Your phone',
-               type: 'tel',
-               isRequired: false,
-          },
-          {
-               plh: 'Your message',
-               type: 'text',
-               isRequired: true,
-          },
-     ],
-};
-
-MessageFormSection.defaultProps = init;
 export default function MessageFormSection(props: IProps) {
      const [focused, setFocused] = useState(-1);
      const {
@@ -107,3 +76,33 @@ export default function MessageFormSection(props: IProps) {
           </div>
      );
 }
+
+// const init: IProps = {
+//      sectionTitle: 'Contact us',
+//      subtitle: 'Have a question or want to learn more about our services?',
+//      linkText: 'Contact us',
+//      termsAndConditionsText: 'I agree to the terms and conditions',
+//      buttonText: 'Send',
+//      inputFields: [
+//           {
+//                plh: 'Your name',
+//                type: 'text',
+//                isRequired: true,
+//           },
+//           {
+//                plh: 'Your email',
+//                type: 'email',
+//                isRequired: true,
+//           },
+//           {
+//                plh: 'Your phone',
+//                type: 'tel',
+//                isRequired: false,
+//           },
+//           {
+//                plh: 'Your message',
+//                type: 'text',
+//                isRequired: true,
+//           },
+//      ],
+// };
