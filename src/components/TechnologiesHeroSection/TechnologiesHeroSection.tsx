@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 import React, { useEffect, useState } from 'react';
-import styles from './TechnologiesHeroSection.module.css';
+import styles from './technologiesHeroSection.module.css';
 import useScreenSize from '@/hooks/useScreenSize';
 import { builder } from '@builder.io/sdk';
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY as string);
