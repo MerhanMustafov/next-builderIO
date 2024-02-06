@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Logo from '../../../public/accedia-logo.svg';
 import styles from './navigation.module.css';
+import { CgMenuLeft } from 'react-icons/cg';
 
 export default async function Navigation() {
      // const links = await builder.getAll('nav-link', {
@@ -24,21 +25,26 @@ export default async function Navigation() {
                     background: 'black',
                     display: 'flex',
                     flexDirection: 'row',
-                    gap: '50px',
+                    gap: '30px',
                     alignItems: 'center',
                     padding: '20px',
                }}
           >
-               <Image src={Logo} width={100} alt="logo" />
+               <Image src={Logo} width={150} alt="logo" />
                <ul
                     style={{
                          display: 'flex',
                          flexDirection: 'row',
-                         gap: '5px',
                          listStyle: 'none',
                          justifyContent: 'center',
+                         alignItems: 'center',
                     }}
                >
+                    <CgMenuLeft
+                         color="white"
+                         size={30}
+                         style={{ cursor: 'pointer', margin: '10px 0 0 0' }}
+                    />
                     {/* {links?.map((link, index) => (
                          <Link
                               key={index}
@@ -48,12 +54,12 @@ export default async function Navigation() {
                               {link.data?.label}
                          </Link>
                     ))} */}
-                    <Link className={styles.link} href="/">
+                    {/* <Link className={styles.link} href="/">
                          Home
                     </Link>
                     <Link className={styles.link} href="/technologies">
                          Technologies
-                    </Link>
+                    </Link> */}
                </ul>
           </nav>
      );

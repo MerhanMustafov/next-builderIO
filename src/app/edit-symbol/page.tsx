@@ -1,5 +1,5 @@
-import { RenderBuilderContent } from '../../components/builder';
 import { useGetBuilderPageContent } from '@/hooks/useGetBuilderPageContent';
+import { RenderBuilderContent } from '../../components/builder';
 
 interface PageProps {
      params: {
@@ -7,9 +7,12 @@ interface PageProps {
      };
 }
 
-export default async function Page(props: PageProps) {
+export default async function EditSymbol(props: PageProps) {
      const urlPath = '/' + (props?.params?.page?.join('/') || '');
-     const { content, model } = await useGetBuilderPageContent('page', urlPath);
+     const { content, model } = await useGetBuilderPageContent(
+          'symbol',
+          urlPath,
+     );
 
      return <RenderBuilderContent content={content} model={model} />;
 }
