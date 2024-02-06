@@ -80,6 +80,13 @@ export default function Navigation() {
           }
      }, [navLinksIndex, clickedStr]);
 
+     useEffect(() => {
+          if (!show) {
+               setNavLinksIndex(1);
+               setClickedStr('');
+          }
+     }, [show]);
+
      const handleCloseNav = () => {
           setShow(false);
      };
