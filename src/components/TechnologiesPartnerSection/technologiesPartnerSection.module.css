@@ -25,6 +25,7 @@
      justify-content: flex-start;
      align-items: flex-start;
      padding: 15% 40px;
+     overflow: hidden;
 }
 
 .wrapper__right {
@@ -35,6 +36,8 @@
      justify-content: flex-start;
      align-items: flex-start;
      padding: 15% 40px;
+     height: 100vh;
+     overflow: hidden;
 }
 
 .sectionTitle {

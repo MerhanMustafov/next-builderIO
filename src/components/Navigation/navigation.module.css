@@ -7,3 +7,56 @@
      border-radius: 0.25rem;
      transition: color 0.3s ease;
 }
+
+.clickAwayBackground {
+     position: fixed;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     background: transparent;
+     z-index: 100;
+}
+
+.navDrawer {
+     position: fixed;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     z-index: 101;
+     width: 70%;
+     background: rgb(0, 0, 0);
+     padding: 30px 20px;
+}
+
+.closeDrawerButton {
+     position: absolute;
+     color: #ffffff;
+     top: 10px;
+     right: 10px;
+     font-size: 1.6rem;
+     cursor: pointer;
+}
+
+.navContent {
+     display: flex;
+     flex-direction: row;
+     gap: 50px;
+     color: #ffffff;
+     padding: 30px 0 0 50px;
+}
+
+.navNestedContent {
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+     padding: 30px 0 0 20px;
+}
+
+.navContent span {
+     cursor: pointer;
+}
+
+.activeLink {
+     color: #ff0000;
+}
