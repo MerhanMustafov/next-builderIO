@@ -1,18 +1,15 @@
-import { useGetBuilderPageContent } from '@/hooks/useGetBuilderPageContent';
-import { RenderBuilderContent } from '../../components/builder';
+import { useGetBuilderPageContent } from "@/hooks/useGetBuilderPageContent";
+import { RenderBuilderContent } from "../../components/builder";
 
 interface PageProps {
-     params: {
-          page: string[];
-     };
+  params: {
+    page: string[];
+  };
 }
 
 export default async function EditSymbol(props: PageProps) {
-     const urlPath = '/' + (props?.params?.page?.join('/') || '');
-     const { content, model } = await useGetBuilderPageContent(
-          'symbol',
-          urlPath,
-     );
+  const urlPath = "/" + (props?.params?.page?.join("/") || "");
+  const { content, model } = await useGetBuilderPageContent("symbol", urlPath);
 
-     return <RenderBuilderContent content={content} model={model} />;
+  return <RenderBuilderContent content={content} model={model} />;
 }

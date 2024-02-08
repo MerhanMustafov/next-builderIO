@@ -6,12 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pretty": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json}\""
   },
   "dependencies": {
+    "@apollo/client": "^3.9.3",
     "@builder.io/dev-tools": "^0.2.10",
     "@builder.io/react": "^3.2.0",
     "@builder.io/sdk": "^2.2.1",
+    "graphql": "^16.8.1",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
@@ -23,6 +26,7 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
+    "pretty": "^2.0.0",
     "typescript": "^5"
   }
 }

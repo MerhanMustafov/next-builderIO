@@ -1,62 +1,90 @@
-.link {
-     color: #fff;
-     text-decoration: none;
-     font-size: 1.2rem;
-     margin-right: 1rem;
-     padding: 0.25rem;
-     border-radius: 0.25rem;
-     transition: color 0.3s ease;
-}
-
-.clickAwayBackground {
-     position: fixed;
-     top: 0;
-     left: 0;
-     bottom: 0;
-     right: 0;
-     background: transparent;
-     z-index: 100;
+.navWrapper {
+  background: black;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  padding: 20px;
 }
 
 .navDrawer {
-     position: fixed;
-     top: 0;
-     left: 0;
-     bottom: 0;
-     z-index: 101;
-     width: 70%;
-     background: rgb(0, 0, 0);
-     padding: 30px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90vw;
+  height: 100vh;
+  z-index: 10000;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 40px;
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 10px 30px;
+}
+.navUi {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.navSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}
+.link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: color 0.3s ease;
+}
+
+.clickAwayBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+  z-index: 100;
 }
 
 .closeDrawerButton {
-     position: absolute;
-     color: #ffffff;
-     top: 10px;
-     right: 10px;
-     font-size: 1.6rem;
-     cursor: pointer;
+  position: absolute;
+  color: #ffffff;
+  top: 10px;
+  right: 10px;
+  font-size: 1.6rem;
+  cursor: pointer;
 }
 
-.navContent {
-     display: flex;
-     flex-direction: row;
-     gap: 50px;
-     color: #ffffff;
-     padding: 30px 0 0 50px;
+.singleLink {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-right: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.singleLink:hover {
+  color: #ff0000;
 }
 
-.navNestedContent {
-     display: flex;
-     flex-direction: column;
-     gap: 15px;
-     padding: 30px 0 0 20px;
-}
-
-.navContent span {
-     cursor: pointer;
-}
-
-.activeLink {
-     color: #ff0000;
+.singleLinkActive {
+  color: #ff0000;
 }

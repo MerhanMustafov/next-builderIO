@@ -1,21 +1,21 @@
-'use client';
-import { useEffect, useState } from 'react';
+"use client";
+import { useEffect, useState } from "react";
 
 export default function useScreenSize() {
-     const [isWindow, setIsWindow] = useState(true);
-     const handleResize = () => {
-          const width = window.innerWidth;
-          if (width < 1000) {
-               setIsWindow(false);
-          } else {
-               setIsWindow(true);
-          }
-     };
-     useEffect(() => {
-          setIsWindow(true);
-          window.addEventListener('resize', handleResize);
-          handleResize();
-     }, []);
+  const [isWindow, setIsWindow] = useState(true);
+  const handleResize = () => {
+    const width = window.innerWidth;
+    if (width < 1000) {
+      setIsWindow(false);
+    } else {
+      setIsWindow(true);
+    }
+  };
+  useEffect(() => {
+    setIsWindow(true);
+    window.addEventListener("resize", handleResize);
+    handleResize();
+  }, []);
 
-     return { isWindow };
+  return { isWindow };
 }
