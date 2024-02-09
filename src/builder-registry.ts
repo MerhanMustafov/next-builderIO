@@ -7,7 +7,6 @@ import MessageFormSection from "./components/MessageForm/MessageFormSection";
 
 Builder.registerComponent(TechnologiesHeroSection, {
   name: "TechnologiesHeroSection",
-  models: ["page"],
   inputs: [
     {
       name: "title",
@@ -33,7 +32,6 @@ Builder.registerComponent(TechnologiesHeroSection, {
 });
 Builder.registerComponent(TechnologiesServicesSection, {
   name: "TechnologiesServicesSection",
-  models: ["page"],
   defaultStyles: {
     background: "red",
   },
@@ -75,7 +73,6 @@ Builder.registerComponent(TechnologiesServicesSection, {
 });
 Builder.registerComponent(TechnologiesPartnerSection, {
   name: "TechnologiesPartnerSection",
-  models: ["page"],
   inputs: [
     {
       name: "title",
@@ -123,7 +120,6 @@ Builder.registerComponent(TechnologiesPartnerSection, {
 });
 Builder.registerComponent(MessageFormSection, {
   name: "MessageFormSection",
-  models: ["page"],
   inputs: [
     {
       name: "sectionTitle",
