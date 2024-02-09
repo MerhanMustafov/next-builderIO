@@ -27,9 +27,6 @@ export default function Links(props: LinkProps) {
   const { l1, l2, l3, l4, closeNavigationDrawer } = props;
   const links = [l1, l2, l3, l4];
 
-  console.log(l3);
-  console.log(l4);
-
   const handleRefsExtraction = (nestedLinks: RefLinkData[] | undefined, layer: 2 | 3 | 4) => {
     const extractedArrayOfRefIds = nestedLinks
       ? nestedLinks.reduce((acc, curr: RefLinkData) => {
