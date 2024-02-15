@@ -28,7 +28,7 @@ export default function NavNestedOne() {
   }
 
   return (
-    <div className={styles["dropdown"]}>
+    <div className={styles["dropdown"]} onMouseLeave={closeNavigationDrawer}>
       <div className={styles["header"]}>
         <MdOutlineClose onClick={closeNavigationDrawer} className={styles["closeIcon"]} />
       </div>

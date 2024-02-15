@@ -78,7 +78,7 @@ export default function NavTopLevel(props: IProps) {
           return (
             <Link
               key={componentKey}
-              // onMouseOver={() => handleMouseOver(label, null, 1)}
+              onMouseOver={() => handleMouseOver(label, null, 1)}
               className={styles["navLink"]}
               href={url}
             >
