@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Navigation from "../components/Navigation/Navigation";
+import NavServer from "@/components/NavigationV2/NavServer";
 import "./globals.css";
 import styles from "./layout.module.css";
 import Footer from "@/components/Footer/Footer";
@@ -22,7 +23,8 @@ export default function RootLayout({
       <body>
         <div className={styles.root}>
           <header className={styles.header}>
-            <Navigation />
+            {/* <Navigation /> */}
+            <NavServer />
           </header>
           <main className={styles.main}>{children}</main>
           <Footer />

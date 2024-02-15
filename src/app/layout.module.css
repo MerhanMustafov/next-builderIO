@@ -1,23 +1,24 @@
 .root {
-     min-height: 100vh;
-     display: grid;
-     grid-template-rows: auto 1fr auto;
-     grid-template-columns: max-content auto;
-     grid-template-areas:
-          'sidebar header header'
-          'sidebar main main'
-          'sidebar footer footer';
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: max-content auto;
+  grid-template-areas:
+    "sidebar header header"
+    "sidebar main main"
+    "sidebar footer footer";
 }
 
 .header {
-     grid-area: header;
-     background-color: #fff;
-     box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
-     z-index: 100;
+  grid-area: header;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  z-index: 100;
+  position: relative;
 }
 .main {
-     grid-area: main;
-     background-color: #f4f6f8;
-     overflow-y: auto;
-     overflow-x: hidden;
+  grid-area: main;
+  background-color: #f4f6f8;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
